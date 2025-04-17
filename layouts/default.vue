@@ -1,5 +1,15 @@
-<script setup></script>
+<script setup>
+import Navbar from '~/components/Header/Navbar.vue';
+
+</script>
 
 <template>
-    <AppAlert />
+    <div>
+
+        <Navbar/>
+        <Main>
+            <NuxtPage></NuxtPage>
+        </Main>
+        <AppAlert />
+    </div>
 </template>
