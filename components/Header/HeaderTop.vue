@@ -18,8 +18,8 @@
         </span>
         <Transition name="fade" mode="out-in" >
 
-            <ul  v-if="isDropped"  class="absolute bg-white w-full top-8 shadow-2xl rounded-md p-3 z-1 text-gray-400 " >
-                <li @click="setSelectedLanguage(lg)" v-for="(lg , index) in languages"  > {{ lg }} </li>
+            <ul  v-if="isDropped"  class="absolute bg-white w-full top-8  shadow-xl  p-3 z-1 text-black " >
+                <li class="cursor-pointer hover:bg-gray-100 w-full p-1" @click="setSelectedLanguage(lg)" v-for="(lg , index) in languages"  > {{ lg }} </li>
             </ul>
         </Transition>
       </div>
@@ -45,9 +45,12 @@
 </script>
 <style scoped>
 .fade-enter-active, .fade-leave-active {
-  transition: opacity 0.5s ease;
+  transition: all 0.3s ease-in-out;
 }
 .fade-enter-from, .fade-leave-to {
   opacity: 0;
+  transform: translateY(30px);
+  
 }
+
 </style>

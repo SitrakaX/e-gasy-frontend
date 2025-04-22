@@ -8,9 +8,9 @@ import Navbar from '~/components/Header/Navbar.vue';
     <div>
 
         <Header></Header>
-        <Main>
+        <main>
             <NuxtPage></NuxtPage>
-        </Main>
-        <AppAlert />
+        </main>
+        <!-- <AppAlert /> -->
     </div>
 </template>
