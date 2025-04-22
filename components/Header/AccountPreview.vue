@@ -1,5 +1,5 @@
 <template>
-    <div class="flex items-center w-45 gap-2  justify-between cursor-pointer hover:bg-gray-100 p-2">
+    <div class="flex items-center w-45 gap-2  justify-between cursor-pointer hover:bg-gray-100 p-2 max-[1100px]:hidden">
         <div class=" border-2 border-gray-300 w-12 h-12 grid place-content-center rounded-4xl text-black font-light"><Icon name="heroicons-outline:user" class="text-3xl" ></Icon></div>
         <div class="">
             <p class="text-gray-400">hello user</p>
