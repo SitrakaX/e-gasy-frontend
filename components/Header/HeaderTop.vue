@@ -1,8 +1,8 @@
 <template>
-  <div class="bg-black w-full h-1/4 flex items-center justify-around px-1">
-    <div class="w-70 flex gap-1.5 items-center">
-      <Icon name="fluent:vehicle-truck-profile-24-regular" class="text-yellow-300" />
-      <p class="text-sm">FREE Express Shipping On Orders 570+</p>
+  <div class="bg-[#010F1C] w-full h-1/8 flex items-center justify-around px-1">
+    <div class="w-70 flex gap-1.5 items-center mr-100">
+      <Icon name="fluent:vehicle-truck-profile-24-regular" class="text-yellow-300" size=25 />
+      <p class="text-[13px] text-white font-medium">FREE Express Shipping On Orders 570+</p>
     </div>
     <div class="w-1/4 flex items-center justify-center">
       <div class="w-30 relative border-gray-400  border-r-1">
