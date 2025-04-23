@@ -1,16 +1,15 @@
 <script setup>
 import Header from '~/components/Header/Header.vue';
-import Navbar from '~/components/Header/Navbar.vue';
 
 </script>
 
 <template>
     <div>
 
-        <Header></Header>
+        <Header />
+        <MainCarousel />
         <main>
-            <NuxtPage></NuxtPage>
+            <NuxtPage />
         </main>
-        <!-- <AppAlert /> -->
     </div>
 </template>
