@@ -3,23 +3,23 @@
     <Transition name="slide">
       <aside
         v-if="modelValue"
-        class="fixed top-0 left-0 w-92 h-full bg-white shadow-lg z-50 pt-15 gap-5 "
+        id="sidebar"
+        class="fixed top-[5dvh] rounded-xl overflow-hidden left-[5dvw] w-[17dvw] h-[90dvh] bg-white shadow-lg z-50 pt-15 gap-5 "
       >
         <button
           @click="$emit('update:modelValue', false)"
-          class="absolute top-3 right-3 flex items-center justify-center text-black text-2xl hover:bg-gray-100 rounded-4xl w-10 h-10 cursor-pointer z-100"
+          class="absolute top-4 right-7 flex items-center justify-center text-black text-2xl hover:bg-gray-100 rounded-4xl w-10 h-10 cursor-pointer z-100"
         >
           <Icon name="material-symbols:close-rounded"></Icon>
         </button>
-        <div class="w-full h-full gap-5 flex flex-col overflow-y-scroll
+        <div class="w-full h-full gap-5 flex flex-col overflow-y-scroll overflow-x-auto
         [&::-webkit-scrollbar]:w-2
   [&::-webkit-scrollbar-track]:bg-white
   [&::-webkit-scrollbar-thumb]:bg-black
   dark:[&::-webkit-scrollbar-track]:bg-white
   dark:[&::-webkit-scrollbar-thumb]:bg-gray-200 ">
 
-          <HeaderSideBarSection category-name="Gaming" ></HeaderSideBarSection>
-          <HeaderSideBarSection category-name="Services" ></HeaderSideBarSection>
+          <HeaderSideBarSection :category-name="category.name" :icon="category.icon" :subcategories="category.subcategories" v-for="(category,index) in props.categories" :key="index" ></HeaderSideBarSection>
         </div>
       </aside>
     </Transition>
@@ -32,10 +32,15 @@
 </template>
 
 <script setup>
-defineProps({
+const props = defineProps({
   modelValue: Boolean,
+  categories: Array,
 });
 defineEmits(["update:modelValue"]);
+
+
+
+
 </script>
 
 <style scoped>
